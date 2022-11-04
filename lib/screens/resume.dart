@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/models/providerfile.dart';
-import '../helpers/traslatemenu.dart';
+import '../models/traslatemenu.dart';
 import '../widgets/resumeOverview.dart';
 
 class ResumeScreen extends StatefulWidget {

@@ -5,7 +5,7 @@ import '../const.dart';
 class MyText extends StatelessWidget {
   String title;
   Color color;
-  double textsize;
+  double? textsize;
   FontWeight weight;
 
   TextOverflow overflow;
@@ -15,7 +15,7 @@ class MyText extends StatelessWidget {
     required this.title,
     required this.color,
     required this.weight,
-    required this.textsize,
+    this.textsize,
     this.overflow = TextOverflow.ellipsis,
   }) : super(key: key);
 
@@ -29,10 +29,25 @@ class MyText extends StatelessWidget {
           style: TextStyle(
             fontWeight: weight,
             color: color,
-            fontSize: textsize,
+            fontSize: MediaQuery.textScaleFactorOf(context) * 15,
           ),
         ),
       ],
     );
   }
+}
+
+Widget SmallText({
+  required BuildContext context,
+  required String title,
+  required Color color,
+  double? textsize,
+}) {
+  return Text(
+    title,
+    style: TextStyle(
+        fontSize: MediaQuery.textScaleFactorOf(context) * 12,
+        fontWeight: FontWeight.w500,
+        color: color),
+  );
 }

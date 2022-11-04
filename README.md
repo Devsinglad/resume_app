@@ -4,10 +4,38 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project Resume App was built using Flutter frame work.
 
-A few resources to get you started if this is your first Flutter project:
+Features:
+Nice User Interface,
+Different Modes(dark&light)
+Translation into for Different languages(EN,PT,ES,RU)
+Links to My social media account
 
+The code base was written with dart programming language.
+The Design architecture used in this project is MVC(Model,Views and controllers)
+
+LIBS
+provider:The provider package was used to provides a state management technique that is used for managing a piece of data around the app.
+
+url_launcher:This package URL Launcher is a Flutter plugin that allows your applications to launch web browsers, map applications, dialer applications, mail applications, and so on
+it was used in this app because in the social part of the app web link were attached to each of the images once tapped it redirects the user to thw website specified.
+
+easy_localization: This package was used for translation into different languages in the app.
+
+FEATURES TO BE ADDED:
+Animation
+Splash screen
+chat system
+
+CHALLENGES:
+Difficulty in getting designs
+A little challenge in understanding how easy_localization package coding syntax is used. it was solved after series of research and I did understand it.
+
+
+- [LinkedIn Profile](https://www.linkedin.com/in/simon-singlad-chuwkwu-915115244/)
+- [Github](https://www.github.com/devsinglad)
+- [Email](simonsinglad5@gmail.com)
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 

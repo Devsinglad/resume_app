@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-
 import '../const.dart';
 import '../models/providerfile.dart';
 import 'const widgets.dart';
@@ -29,7 +28,7 @@ class resumeOverview extends StatelessWidget {
           title: 'skill'.tr(),
           color: provider.isDark ? Colors.blue : Colors.brown,
           weight: FontWeight.w600,
-          textsize: size,
+          //textsize: size,
         ),
         MySkill(
           text: 'Dart',
@@ -62,7 +61,7 @@ class resumeOverview extends StatelessWidget {
           title: 'EXPERIENCE'.tr(),
           color: provider.isDark ? Colors.blue : Colors.brown,
           weight: FontWeight.w600,
-          textsize: size,
+          //textsize: size,
         ),
         SizedBox(
           height: 10,
@@ -79,7 +78,7 @@ class resumeOverview extends StatelessWidget {
           title: 'EDUCATION'.tr(),
           color: provider.isDark ? Colors.blue : Colors.brown,
           weight: FontWeight.w600,
-          textsize: size,
+          //textsize: size,
         ),
         SizedBox(
           height: 10,
@@ -96,7 +95,7 @@ class resumeOverview extends StatelessWidget {
           title: 'SOCIALS'.tr(),
           color: provider.isDark ? Colors.blue : Colors.brown,
           weight: FontWeight.w600,
-          textsize: size,
+          //textsize: size,
         ),
         SizedBox(
           height: 10,

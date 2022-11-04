@@ -1,5 +1,4 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../const.dart';
@@ -44,6 +43,8 @@ class Input extends StatelessWidget {
             height: 10,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Icon(
                 Icons.location_on,
@@ -75,22 +76,22 @@ class MySkill extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      padding: const EdgeInsets.only(
+        top: 4.0,
+        bottom: 4,
+      ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
-            flex: 2,
-            child: MyText(
-              title: text.toUpperCase(),
-              color: Colors.grey,
-              weight: FontWeight.w600,
-              textsize: Smallsize,
-            ),
+          MyText(
+            title: text.toUpperCase(),
+            color: Colors.grey,
+            weight: FontWeight.w600,
+            textsize: Smallsize,
           ),
-          Expanded(
-            flex: 5,
+          SizedBox(
+            width: MediaQuery.of(context).size.width / 2,
             child: LinearProgressIndicator(
               color: progressColor,
               value: level,
@@ -155,13 +156,19 @@ class Header extends StatelessWidget {
               title: 'name_text'.tr(),
               color: Colors.black,
               weight: FontWeight.bold,
-              textsize: size,
+              textsize: MediaQuery.of(context).textScaleFactor * 15,
+            ),
+            SizedBox(
+              height: 5,
             ),
             MyText(
               title: 'title_description'.tr(),
               color: Colors.grey,
               weight: FontWeight.bold,
               textsize: Smallsize,
+            ),
+            SizedBox(
+              height: 5,
             ),
             Row(
               children: [
@@ -195,7 +202,8 @@ class socialLink extends StatelessWidget {
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         InkWell(
           onTap: provider.launchGmailUrl,
@@ -209,14 +217,14 @@ class socialLink extends StatelessWidget {
                   width: 30,
                 ),
                 SizedBox(
-                  width: 4,
+                  width: 6,
                 ),
                 MyText(
                   title: 'simonsinglad5@gmail.com',
                   color: Colors.black,
                   weight: FontWeight.w500,
                   textsize: Smallsize,
-                )
+                ),
               ],
             ),
           ),
@@ -225,23 +233,10 @@ class socialLink extends StatelessWidget {
           onTap: provider.launchLinkedInUrl,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Image.asset(
-                  image3,
-                  height: 30,
-                  width: 30,
-                ),
-                SizedBox(
-                  width: 4,
-                ),
-                MyText(
-                  title: 'www.linkedin.com/in/uchenna-chuwkwu-915115244',
-                  color: Colors.black,
-                  weight: FontWeight.w500,
-                  textsize: Smallsize,
-                )
-              ],
+            child: Image.asset(
+              image3,
+              height: 30,
+              width: 30,
             ),
           ),
         ),
@@ -249,24 +244,17 @@ class socialLink extends StatelessWidget {
           onTap: provider.launchGitUrl,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Image.asset(
-                  image4,
-                  height: 30,
-                  width: 30,
-                ),
-                SizedBox(
-                  width: 4,
-                ),
-                MyText(
-                  title: 'github.com/devsinglad',
-                  color: Colors.black,
-                  weight: FontWeight.w500,
-                  textsize: Smallsize,
-                )
-              ],
-            ),
+            child: provider.isDark
+                ? Image.asset(
+                    image4,
+                    height: 30,
+                    width: 30,
+                  )
+                : Image.asset(
+                    image5,
+                    height: MediaQuery.of(context).size.height / 15,
+                    width: MediaQuery.of(context).size.width / 4,
+                  ),
           ),
         ),
       ],
