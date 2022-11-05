@@ -36,6 +36,7 @@ A little challenge in understanding how easy_localization package coding syntax 
  ![ScreenShot](assets/image/Screenshot_20221105_191421.png)
  ![ScreenShot](assets/image/Screenshot_20221105_191458.png)
  ![ScreenShot](assets/image/Screenshot_20221105_191515.png)
+ ![ScreenShot](assets/image/Screenshot_en.png) ![ScreenShot](assets/image/Screenshot_social.png)
 - [LinkedIn Profile](https://www.linkedin.com/in/simon-singlad-chuwkwu-915115244/)
 - [Github](https://www.github.com/devsinglad)
 - [Email](simonsinglad5@gmail.com)
