@@ -9,6 +9,7 @@ class MyProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // Gmail URL function
   Future<void> launchGmailUrl() async {
     final Uri _url = Uri.parse('https://www.gmail.com');
     if (!await launchUrl(_url)) {
@@ -16,6 +17,7 @@ class MyProvider extends ChangeNotifier {
     }
   }
 
+//linkedIn Url function
   Future<void> launchLinkedInUrl() async {
     final Uri _url = Uri.parse(
         'https://www.linkedin.com/in/simon-singlad-chuwkwu-915115244/');
@@ -24,6 +26,7 @@ class MyProvider extends ChangeNotifier {
     }
   }
 
+  //Github Url function
   Future<void> launchGitUrl() async {
     final Uri _url = Uri.parse('https://www.github.com/devsinglad');
     if (!await launchUrl(_url)) {

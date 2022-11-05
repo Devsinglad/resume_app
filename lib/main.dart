@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:resume_app/screens/resume.dart';
-
 import 'models/providerfile.dart';
 
 Future<void> main() async {

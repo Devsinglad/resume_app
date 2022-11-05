@@ -5,130 +5,7 @@ import '../const.dart';
 import '../models/providerfile.dart';
 import 'myText.dart';
 
-class Input extends StatelessWidget {
-  String text;
-  String subtitle;
-  String location;
-  Input({
-    Key? key,
-    required this.text,
-    required this.subtitle,
-    required this.location,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    var provider = Provider.of<MyProvider>(context);
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          MyText(
-            title: text,
-            color: Colors.grey,
-            weight: FontWeight.w600,
-            textsize: Smallsize,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          MyText(
-            title: subtitle,
-            color: Colors.grey,
-            weight: FontWeight.w600,
-            textsize: Smallsize,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(
-                Icons.location_on,
-                color: Colors.blue,
-              ),
-              MyText(
-                title: location,
-                color: Colors.grey,
-                weight: FontWeight.w600,
-                textsize: Smallsize,
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class MySkill extends StatelessWidget {
-  String text;
-  double level;
-  MySkill({
-    Key? key,
-    required this.text,
-    required this.level,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        top: 4.0,
-        bottom: 4,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        // crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          MyText(
-            title: text.toUpperCase(),
-            color: Colors.grey,
-            weight: FontWeight.w600,
-            textsize: Smallsize,
-          ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width / 2,
-            child: LinearProgressIndicator(
-              color: progressColor,
-              value: level,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class About extends StatelessWidget {
-  const About({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    var provider = Provider.of<MyProvider>(context);
-
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
-          color: Boxcolor, borderRadius: BorderRadius.circular(10)),
-      child: Text(
-        'about_description'.tr(),
-        style: TextStyle(
-          fontSize: Smallsize,
-          fontWeight: FontWeight.bold,
-          color: provider.isDark ? Colors.blueGrey : Colors.black,
-        ),
-      ),
-    );
-  }
-}
-
+//my header class widget
 class Header extends StatelessWidget {
   const Header({
     Key? key,
@@ -191,6 +68,132 @@ class Header extends StatelessWidget {
   }
 }
 
+// about me widget class
+class About extends StatelessWidget {
+  const About({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
+
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+          color: Boxcolor, borderRadius: BorderRadius.circular(10)),
+      child: Text(
+        'about_description'.tr(),
+        style: TextStyle(
+          fontSize: Smallsize,
+          fontWeight: FontWeight.bold,
+          color: provider.isDark ? Colors.blueGrey : Colors.black,
+        ),
+      ),
+    );
+  }
+}
+
+// My skill widget
+class MySkill extends StatelessWidget {
+  String text;
+  double level;
+  MySkill({
+    Key? key,
+    required this.text,
+    required this.level,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: 4.0,
+        bottom: 4,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          MyText(
+            title: text.toUpperCase(),
+            color: Colors.grey,
+            weight: FontWeight.w600,
+            textsize: Smallsize,
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width / 2,
+            child: LinearProgressIndicator(
+              color: progressColor,
+              value: level,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// inputs class widgets
+class Input extends StatelessWidget {
+  String text;
+  String subtitle;
+  String location;
+  Input({
+    Key? key,
+    required this.text,
+    required this.subtitle,
+    required this.location,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          MyText(
+            title: text,
+            color: Colors.grey,
+            weight: FontWeight.w600,
+            textsize: Smallsize,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          MyText(
+            title: subtitle,
+            color: Colors.grey,
+            weight: FontWeight.w600,
+            textsize: Smallsize,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(
+                Icons.location_on,
+                color: Colors.blue,
+              ),
+              MyText(
+                title: location,
+                color: Colors.grey,
+                weight: FontWeight.w600,
+                textsize: Smallsize,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+//social links class widgets
 class socialLink extends StatelessWidget {
   socialLink({
     Key? key,

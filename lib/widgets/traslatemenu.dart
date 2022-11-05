@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-
-import 'providerfile.dart';
+import '../models/providerfile.dart';
 
 class TranslateMenu extends StatelessWidget {
   const TranslateMenu({
