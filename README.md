@@ -33,6 +33,9 @@ Difficulty in getting designs
 A little challenge in understanding how easy_localization package coding syntax is used. it was solved after series of research and I did understand it.
 
  ![ScreenShot](assets/image/Screenshot_20221105_191333.png)
+ ![ScreenShot](assets/image/Screenshot_20221105_191421.png)
+ ![ScreenShot](assets/image/Screenshot_20221105_191458.png)
+ ![ScreenShot](assets/image/Screenshot_20221105_191515.png)
 - [LinkedIn Profile](https://www.linkedin.com/in/simon-singlad-chuwkwu-915115244/)
 - [Github](https://www.github.com/devsinglad)
 - [Email](simonsinglad5@gmail.com)
