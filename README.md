@@ -10,7 +10,7 @@ Features:
 Nice User Interface,
 Different Modes(dark&light)
 Translation into for Different languages(EN,PT,ES,RU)
-Links to My social media account
+Links to My social media account attached on tapping any social media icon respectively.
 
 The code base was written with dart programming language.
 The Design architecture used in this project is MVC(Model,Views and controllers)
@@ -32,10 +32,11 @@ CHALLENGES:
 Difficulty in getting designs
 A little challenge in understanding how easy_localization package coding syntax is used. it was solved after series of research and I did understand it.
 
-
+- [ScreenShot](assets/image/Screenshot_20221105_191333.png)
 - [LinkedIn Profile](https://www.linkedin.com/in/simon-singlad-chuwkwu-915115244/)
 - [Github](https://www.github.com/devsinglad)
 - [Email](simonsinglad5@gmail.com)
+- [Flutter Apk File link](https://drive.google.com/drive/folders/1GfrdaNZ33CwgYux6hWMyG9US6_-2CVkP?usp=sharing)
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
